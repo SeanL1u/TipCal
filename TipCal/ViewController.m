@@ -23,33 +23,24 @@
     [super viewDidLoad];
     
     self.topBar.center = self.bottomBar.center;
-    [self percentageUpDate];
-
-    
-    
-    
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    //[self percentageUpDate];
 }
 
 
 - (IBAction)slide:(UIPanGestureRecognizer*)sender {
     
-    CGFloat horizontalTranslation = [sender translationInView: self.view].x;
-    CGFloat newX = self.topBar.center.x + horizontalTranslation*1;
+    CGFloat newX = self.topBar.center.x + [sender translationInView: self.view].x;
     
     //if( -0.1 > self.topBar.frame.origin.x > (-375.1)){
-    [UIView animateWithDuration:0.02 animations:^{
+    //[UIView animateWithDuration:0.02 animations:^{
+    
     self.topBar.center = CGPointMake(newX,self.bottomBar.center.y);
+    
     [self.bottomBar bringSubviewToFront:self.topBar];
-    }];//}
+    //}];//}
     
     [sender setTranslation:CGPointZero inView:self.view];
-    [self percentageUpDate];
+    //[self percentageUpDate];
 }
 
 
@@ -63,10 +54,10 @@
 }
 
 -(void)percentageUpDate{
-    
-    self.percentageLabel.text = [NSString stringWithFormat:@"%ld %@", (long)self.percentageNum, @"%"];
-    
 
-}
+    self.percentageLabel.text = [NSString stringWithFormat:@"%ld %@", (long)self.percentageNum, @"%"];}
+//
+//
+//}
 
 @end

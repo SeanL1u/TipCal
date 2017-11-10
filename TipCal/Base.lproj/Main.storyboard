@@ -36,20 +36,11 @@
                                     <constraint firstAttribute="height" constant="50" id="kAK-6J-MTl"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percentage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfa-bA-ll4">
-                                <rect key="frame" x="121.5" y="567.5" width="132" height="32.5"/>
-                                <viewLayoutGuide key="safeArea" id="9qR-8B-vNB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.082853607833385468" green="0.64577025175094604" blue="0.77158439159393311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="hOG-bm-nDZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GRO-ll-HDB"/>
-                            <constraint firstItem="mfa-bA-ll4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.75" id="HP8-of-i2X"/>
-                            <constraint firstItem="mfa-bA-ll4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KDb-dh-HVP"/>
                             <constraint firstItem="hOG-bm-nDZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.75" id="kHO-Jx-EHu"/>
                             <constraint firstAttribute="trailing" secondItem="hOG-bm-nDZ" secondAttribute="trailing" id="l0v-pP-fLM"/>
                             <constraint firstItem="SvP-oK-RYh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.75" id="sGt-Zb-gIw"/>
@@ -60,7 +51,6 @@
                     </view>
                     <connections>
                         <outlet property="bottomBar" destination="SvP-oK-RYh" id="E1W-NQ-8X2"/>
-                        <outlet property="percentageLabel" destination="mfa-bA-ll4" id="sbM-oD-H4P"/>
                         <outlet property="topBar" destination="hOG-bm-nDZ" id="fkZ-oz-EEm"/>
                     </connections>
                 </viewController>
