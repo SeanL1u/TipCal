@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SvP-oK-RYh">
+                                <rect key="frame" x="0.0" y="558" width="375" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8TK-q3-DLr"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="14G-ly-6m5" appends="YES" id="fUb-fY-PNs"/>
+                                </connections>
+                            </view>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOG-bm-nDZ">
+                                <rect key="frame" x="0.0" y="559" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="2Fq-XN-7F9"/>
+                                    <constraint firstAttribute="height" constant="50" id="kAK-6J-MTl"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percentage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfa-bA-ll4">
+                                <rect key="frame" x="121.5" y="567.5" width="132" height="32.5"/>
+                                <viewLayoutGuide key="safeArea" id="9qR-8B-vNB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.082853607833385468" green="0.64577025175094604" blue="0.77158439159393311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="hOG-bm-nDZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GRO-ll-HDB"/>
+                            <constraint firstItem="mfa-bA-ll4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.75" id="HP8-of-i2X"/>
+                            <constraint firstItem="mfa-bA-ll4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KDb-dh-HVP"/>
+                            <constraint firstItem="hOG-bm-nDZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.75" id="kHO-Jx-EHu"/>
+                            <constraint firstAttribute="trailing" secondItem="hOG-bm-nDZ" secondAttribute="trailing" id="l0v-pP-fLM"/>
+                            <constraint firstItem="SvP-oK-RYh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.75" id="sGt-Zb-gIw"/>
+                            <constraint firstItem="SvP-oK-RYh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ufM-g6-mkP"/>
+                            <constraint firstItem="SvP-oK-RYh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xMT-BF-Z0M"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomBar" destination="SvP-oK-RYh" id="E1W-NQ-8X2"/>
+                        <outlet property="percentageLabel" destination="mfa-bA-ll4" id="sbM-oD-H4P"/>
+                        <outlet property="topBar" destination="hOG-bm-nDZ" id="fkZ-oz-EEm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="14G-ly-6m5">
+                    <connections>
+                        <action selector="slide:" destination="BYZ-38-t0r" id="8hg-E8-Too"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
