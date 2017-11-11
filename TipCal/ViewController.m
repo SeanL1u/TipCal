@@ -24,6 +24,9 @@
     
     self.topBar.center = self.bottomBar.center;
     //[self percentageUpDate];
+
+    
+
 }
 
 
@@ -40,23 +43,21 @@
     //}];//}
     
     [sender setTranslation:CGPointZero inView:self.view];
-    //[self percentageUpDate];
+//        if(sender.state == UIGestureRecognizerStateEnded){
+//        [self percentageUpDate];}
 }
 
 
 -(NSInteger)percentageNum{
-    CGFloat position = self.topBar.frame.origin.x;
-    NSInteger i = (NSInteger)floor(position/3.75);NSLog(@"%ld",(long)i);
-
-    return (NSInteger)floor(position/3.75);
     
-    
+    NSInteger position = floor(self.topBar.frame.origin.x);
+    return floor(position/3.75);
 }
-
--(void)percentageUpDate{
-
-    self.percentageLabel.text = [NSString stringWithFormat:@"%ld %@", (long)self.percentageNum, @"%"];}
 //
+//-(void)percentageUpDate{
+//
+//    self.percentageLabel.text = [NSString stringWithFormat:@"%ld %@", (long)self.percentageNum, @"%"];}
+
 //
 //}
 
